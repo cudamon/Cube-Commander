@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour {
 
 			int j = Random.Range(0, groups.Length);
 			//Spawn in a new block
-			var obj=Instantiate(groups[j], new Vector2(0, 6), blockfall.transform.rotation);
+			var obj=Instantiate(groups[j], new Vector2(this.transform.position.x,this.transform.position.y), blockfall.transform.rotation);
 
 			// Find block and set parent to Centerpieces object
 			print (groups[j] + "(Clone)");
