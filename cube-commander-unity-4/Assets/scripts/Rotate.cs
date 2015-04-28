@@ -9,12 +9,38 @@ public class Rotate : MonoBehaviour {
 
 	int spinspeed = 200;
 
+	public bool rotateLeft = false;
+	public bool rotateRight= false;
+
 	// Update is called once per frame
 	void Update () {
 
-		if (Time.timeScale != 0){
+		foreach (Touch touch in Input.touches) {
+			if (touch.position.x < Screen.width/2) {
+				if (touch.phase == TouchPhase.Began){
+					rotateLeft = true;
+				}
+				else if (touch.phase == TouchPhase.Ended){
+					rotateLeft = false;
+				}
+			}
+			else if (touch.position.x > Screen.width/2) {
+					if (touch.phase == TouchPhase.Began){
+						rotateRight = true;
+					}
+					else if (touch.phase == TouchPhase.Ended){
+						rotateRight = false;
+					}
+				}
+			}
 
+		if (rotateLeft) {
+			transform.Rotate (0, 0, spinspeed * Time.deltaTime);
 		}
+		if (rotateRight) {
+			transform.Rotate (0, 0, -spinspeed * Time.deltaTime);
+		}
+
 
 		if (Input.GetKey ("a")) {
 			//print ("LEFT");

@@ -20,10 +20,19 @@ public class buttons : MonoBehaviour {
 		MenuBox.SetActive(true);
 		Time.timeScale = 0;
 	}
-	public void ResumeeBtn() {
+	public void ResumeBtn() {
 		MenuBox.SetActive(false);
 		Time.timeScale = 1;
 	}
+
+	/*public void TouchRight() {
+		transform.Rotate (0, 0, -spinspeed * Time.deltaTime);
+	}
+	
+	public void TouchLeft() {
+		transform.Rotate (0, 0, spinspeed * Time.deltaTime);
+	}*/
+
 	/* Yet to be implemented
 	public void SaveBtn() {
 	save game

@@ -6,20 +6,20 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.053 seconds
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.052 seconds
 desktop: 2560x1440 59Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Public\Documents\Unity Projects\CuboidCommanderUI\UItest_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Bio Hazzard\Documents\GitHub\Cube-Commander\cube-commander-unity-4\UItest_Data\Managed\System.dll (this message is harmless)
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1771)
