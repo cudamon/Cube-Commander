@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Rotate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Heredity.cs">
     <Files>
-      <File FileName="Assets\scripts\Rotate.cs" Line="31" Column="29" />
-      <File FileName="Assets\scripts\buttons.cs" Line="21" Column="22" />
+      <File FileName="Assets\scripts\Heredity.cs" Line="162" Column="1" />
+      <File FileName="Assets\scripts\Rotate.cs" Line="5" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
