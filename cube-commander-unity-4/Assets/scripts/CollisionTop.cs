@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+//Remember to have UI library
+using UnityEngine.UI;
 
-public class CollisionTop : MonoBehaviour {
+	public class CollisionTop : MonoBehaviour {
 
 	public Transform block;
 	public Transform CenterPieces;
+	public Text ScoreCounter;
 	public AudioClip chime;
+	public int ScoreInc;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	void OnCollisionEnter2D (Collision2D col)
@@ -87,6 +89,9 @@ public class CollisionTop : MonoBehaviour {
 		if (same) {
 			CenterPieces.GetComponent<sound>().chimePlay();
 			print ("four in a row!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			//score which is a script component of the score sounter holds the score all other collision scripts simply set / change the public score int on it
+			ScoreCounter.GetComponent<score>().Score = ScoreCounter.GetComponent<score>().Score + ScoreInc;
+			ScoreCounter.text = ScoreCounter.GetComponent<score>().Score.ToString().PadLeft(4,'0')+"\n-------\n"+ScoreCounter.GetComponent<score>().ScoreGoal;
 			for(k=0;k<4;k++){
 				Destroy(GridArray.grid[i,j-k].gameObject);
 				GridArray.grid[i,j-k]=null;

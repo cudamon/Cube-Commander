@@ -1,9 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Heredity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CollisionRight.cs">
     <Files>
-      <File FileName="Assets\scripts\Heredity.cs" Line="162" Column="1" />
-      <File FileName="Assets\scripts\Rotate.cs" Line="5" Column="32" />
+      <File FileName="Assets\scripts\CollisionTop.cs" Line="94" Column="149" />
+      <File FileName="Assets\scripts\Spawner.cs" Line="35" Column="30" />
+      <File FileName="Assets\scripts\Rotate.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Heredity.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\buttons.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\CollisionLeft.cs" Line="96" Column="90" />
+      <File FileName="Assets\scripts\CollisionRight.cs" Line="96" Column="91" />
+      <File FileName="Assets\scripts\CollisionBottom.cs" Line="99" Column="149" />
+      <File FileName="Assets\scripts\score.cs" Line="21" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

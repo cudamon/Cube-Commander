@@ -4,11 +4,9 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public Transform blockfall;
-
 	public int SpawnTime;
-
 	public GameObject[] groups;
-
+	bool quickstart = true;
 	int i = 0;
 
 	// Use this for initialization
@@ -20,10 +18,9 @@ public class Spawner : MonoBehaviour {
 
 		//Only spawns a new block in every when i > SpawnTime. i Increases once every frame.
 		i++;
-		if( i > SpawnTime){
-
+		if( i > SpawnTime || quickstart){
+			quickstart = false;
 			i = 0;
-
 			int j = Random.Range(0, groups.Length);
 			//Spawn in a new block
 			var obj=Instantiate(groups[j], new Vector2(this.transform.position.x,this.transform.position.y), blockfall.transform.rotation);

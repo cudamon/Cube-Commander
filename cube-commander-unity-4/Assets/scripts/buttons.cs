@@ -5,6 +5,7 @@ public class buttons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
 		MenuBox=GameObject.Find("MenuBox");
 		MenuBox.SetActive(false);
 	}
@@ -16,6 +17,8 @@ public class buttons : MonoBehaviour {
 	public GameObject MenuBox;
 
 	//Remember to add scripts to EventSystem to be able to use them with buttons
+
+	//Pause game when menu button is clicked
 	public void MenuBtn() {
 		MenuBox.SetActive(true);
 		Time.timeScale = 0;
