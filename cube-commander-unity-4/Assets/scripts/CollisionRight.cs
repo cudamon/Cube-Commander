@@ -31,7 +31,7 @@ public class CollisionRight : MonoBehaviour {
 
 		// subtract 90 degrees for this quadrant
 		float angle = (degree-90F) * Mathf.PI / 180F;
-		print ("Angle = " + degree + " degrees " + angle + " radians");
+//		print ("Angle = " + degree + " degrees " + angle + " radians");
 		
 		float x = transform.position.x;
 		float y = transform.position.y;
@@ -59,38 +59,45 @@ public class CollisionRight : MonoBehaviour {
 		float delta = (90F - degree) * Mathf.PI / 180F;
 		int xd = Mathf.RoundToInt(xx * Mathf.Cos (delta) - yy * Mathf.Sin (delta));
 		int yd = Mathf.RoundToInt(yy * Mathf.Cos (delta) + xx * Mathf.Sin (delta));
-		print ("rotated x = " + xx + " y = " + yy);
-		print ("derotated x = " + xd + " y = " + yd);
+//		print ("rotated x = " + xx + " y = " + yy);
+//		print ("derotated x = " + xd + " y = " + yd);
 		
-		GridArray.grid [xd + GridArray.s, yd + GridArray.s] = objcol;
-		// check if 4 in a row - turn code into a method, pass location xd,yd, return boolean true false
-		// check left -
-		bool same = true;
 		int i = xd + GridArray.s;
 		int j = yd + GridArray.s;
-		print ("i,j=" + i + ","+j);
+		// if i or j are outside of the grid - end game
+		if (i<=0 || i >= 2*GridArray.s+1 || j <= 0 || j >= 2*GridArray.s+1) {
+			Application.LoadLevel ("Heredity");
+		}
+		GridArray.grid [i, j] = objcol;
+		// check if 4 in a row 
+		// check in left direction -
+		bool same = true;
+//		print ("i,j=" + i + ","+j);
 		int k = 1;
-		print("sprite  0:"+GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite);
+//		print("sprite  0:"+GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite);
+		// go 4 spaces or until null spot or different spot is found => not same 
 		while (same==true & k<4) {
 			if(GridArray.grid [i-k,j] == null) {
-				print("null "+k);
-				print ("i+k,j=" + (i-k) + ","+j);
+//				print("null "+k);
+//				print ("i+k,j=" + (i-k) + ","+j);
 				same = false;
 			}
 			else {
-				print ("i+k,j=" + (i-k) + ","+j);
-				print("sprite  "+k+":"+GridArray.grid [i-k,j].GetComponent<SpriteRenderer>().sprite);
+//				print ("i+k,j=" + (i-k) + ","+j);
+//				print("sprite  "+k+":"+GridArray.grid [i-k,j].GetComponent<SpriteRenderer>().sprite);
+				// compare to see if thi next piece is same sprite
 				if(GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite != GridArray.grid [i-k,j].GetComponent<SpriteRenderer>().sprite) {
 					same = false;
 				}
 			}
 			k++;
 		}
-		print ("Blocks = " + (k-1));
-		print ("same = " + same);
+		// if same hasnt been changed to false then we have 4 in a row!
+//		print ("Blocks = " + (k-1));
+//		print ("same = " + same);
 		if (same==true) {
 			CenterPieces.GetComponent<sound>().chimePlay();
-			print ("four in a row!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+//			print ("four in a row!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			//score which is a script component of the score sounter holds the score all other collision scripts simply set / change the public score int on it
 			ScoreCounter.GetComponent<score>().Score = ScoreCounter.GetComponent<score>().Score + ScoreInc;
 			ScoreCounter.text = ScoreCounter.GetComponent<score>().Score.ToString().PadLeft(4,'0')+"\n-------\n"+ScoreCounter.GetComponent<score>().ScoreGoal;
@@ -103,3 +110,8 @@ public class CollisionRight : MonoBehaviour {
 
 	}
 }
+
+
+
+
+

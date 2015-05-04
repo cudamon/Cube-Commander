@@ -52,6 +52,7 @@
      <Compile Include="Assets\scripts\CollisionRight.cs" />
      <Compile Include="Assets\scripts\CollisionTop.cs" />
      <Compile Include="Assets\scripts\CountdownTimer.cs" />
+     <Compile Include="Assets\scripts\EdgeCollider.cs" />
      <Compile Include="Assets\scripts\Fall.cs" />
      <Compile Include="Assets\scripts\Fallx.cs" />
      <Compile Include="Assets\scripts\GridArray.cs" />
@@ -60,9 +61,9 @@
      <Compile Include="Assets\scripts\Rotate.cs" />
      <Compile Include="Assets\scripts\Spawner.cs" />
      <Compile Include="Assets\scripts\blockfly.cs" />
-     <Compile Include="Assets\scripts\brickwall.cs" />
      <Compile Include="Assets\scripts\buttons.cs" />
      <Compile Include="Assets\scripts\exit_game.cs" />
+     <Compile Include="Assets\scripts\keepScore.cs" />
      <Compile Include="Assets\scripts\score.cs" />
      <Compile Include="Assets\scripts\sound.cs" />
  <Reference Include="UnityEngine.UI">

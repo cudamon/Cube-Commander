@@ -30,7 +30,7 @@ public class CollisionBottom : MonoBehaviour {
 		
 		// subtract 90 degrees for this quadrant
 		float angle = (degree-90F) * Mathf.PI / 180F;
-		print ("Angle = " + degree + " degrees " + angle + " radians");
+//		print ("Angle = " + degree + " degrees " + angle + " radians");
 		
 		float x = transform.position.x;
 		float y = transform.position.y;
@@ -62,34 +62,38 @@ public class CollisionBottom : MonoBehaviour {
 		//print ("derotated x = " + xd + " y = " + yd );
 		//print("added sprite  :"+objcol.GetComponent<SpriteRenderer>().sprite);
 		//test if edge of screen and array reached
-		// if abs(xd) > s or abs(yd) > s then stop game
-
-		GridArray.grid [xd + GridArray.s, yd + GridArray.s] = objcol;
-		// check if 4 in a row - turn code into a method, pass location xd,yd, return boolean true false
-		// check up -
-		bool same = true;
 		int i = xd + GridArray.s;
 		int j = yd + GridArray.s;
-		print ("i,j=" + i + ","+j);
+		// if i or j are outside of the grid - end game
+		if (i<=0 || i >= 2*GridArray.s+1 || j <= 0 || j >= 2*GridArray.s+1) {
+			Application.LoadLevel ("Heredity");
+		}
+		GridArray.grid [i, j] = objcol;
+		// check if 4 in a row - 
+		// check in downeard direction -
+		bool same = true;
+//		print ("i,j=" + i + ","+j);
 		int k = 1;
-		print("sprite  0:"+GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite);
+//		print("sprite  0:"+GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite);
+		// go 4 spaces or until null spot or different spot is found => not same 
 		while (same==true & k<4) {
 			if(GridArray.grid [i,j+k] == null) {
-				print("null "+k);
-				print ("i,j+k=" + i + ","+(j+k));
+//				print("null "+k);
+//				print ("i,j+k=" + i + ","+(j+k));
 				same = false;
 			}
 			else {
-				print ("i,j+k=" + i + ","+(j+k));
-				print("sprite  "+k+":"+GridArray.grid [i,j+k].GetComponent<SpriteRenderer>().sprite);
+//				print ("i,j+k=" + i + ","+(j+k));
+//				print("sprite  "+k+":"+GridArray.grid [i,j+k].GetComponent<SpriteRenderer>().sprite);
+				// compare to see if thi next piece is same sprite
 				if(GridArray.grid [i,j].GetComponent<SpriteRenderer>().sprite != GridArray.grid [i,j+k].GetComponent<SpriteRenderer>().sprite) {
 					same = false;
 				}
 			}
 			k++;
 		}
-		print ("Blocks = " + (k-1));
-		print ("same = " + same);
+//		print ("Blocks = " + (k-1));
+//		print ("same = " + same);
 		// if true - delete row and reposition otehr pieces.
 		if (same==true) {
 			CenterPieces.GetComponent<sound>().chimePlay();
