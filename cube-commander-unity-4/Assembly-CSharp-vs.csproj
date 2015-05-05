@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\CameraChange.cs" />
      <Compile Include="Assets\scripts\CollisionBottom.cs" />
      <Compile Include="Assets\scripts\CollisionDetect.cs" />
      <Compile Include="Assets\scripts\CollisionLeft.cs" />
